@@ -1,6 +1,6 @@
 /* -- Navbar -- */
 .navbar{
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-family: 'Merienda One', cursive;		
  }
  @media all and (min-width: 992px) {
@@ -16,6 +16,7 @@
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{ display: block; }
 }
+
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
@@ -31,6 +32,54 @@
     text-decoration: underline;
     transform: rotate(-90deg);
 } 
+.nav-item{
+    padding-left: 15px;
+    padding-right: 15px;
+}  
+/* Hiding */
+#hide{
+    display: none;
+  }
+.hide_img2{
+    display: none;
+} 
+#hide2{
+    display: none;
+} 
+ @media all and (max-width: 992px){
+  #hide{
+    display: initial;
+  }
+  .hide_img1{
+    display: none;
+  }
+  .hide_img2{
+    display: initial;
+}
+  #hide1{
+    display: none;
+  }
+  #hide2{
+    display: inline;
+  }
+  #hide3{
+    display: none;
+  }
+  #scroll{
+    display: none;
+  }
+ }  
+
+#navbar_top{
+  background-color: #1F1F36; 
+  font-size: 20px; 
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+} 
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
 /*-- Footer-- */
 #footer{
@@ -38,7 +87,6 @@
 	padding-top: 2%;
 	background-color:rgb(8, 8, 46);
 	color: white;
-	background-image: url('images/footer_img.png');
 	background-size: cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -54,6 +102,7 @@
 }
 #mail{
 	color:#111111;
+    text-decoration: none;
 }
 #developer{
 	color:#111111;
@@ -63,20 +112,33 @@ body{
 	font-family: 'Merienda One';	
 }
 
-/*Content*/
-.outer-container{
-	box-shadow: rgb(139, 141, 141) 1px 10px 6px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-	padding:0.01em 16px;
-	margin-top:16px;
-	margin-bottom:16px;
+/*hey*/
+
+.my-bg:before {
+    position: absolute;
+    content: "";
+    top: 128px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    background-color: rgba(25,25,25,0.8);
+    z-index: -1;
+    background: #2b2c29;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgba(57, 64, 117, 0.123), rgba(3, 5, 14, 0.11)), url("https://thumbs.dreamstime.com/b/gears-cogwheel-engineering-automation-solution-teamwork-cooperation-business-concept-city-view-website-header-banner-215180496.jpg");
+    background: linear-gradient(rgba(140, 156, 167, 0), rgba(24, 22, 24, 0.089)), url("https://thumbs.dreamstime.com/b/gears-cogwheel-engineering-automation-solution-teamwork-cooperation-business-concept-city-view-website-header-banner-215180496.jpg"); /* The least supported option. */
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #C6C8D4;
 }
-.out_cont{
-	background: linear-gradient(180deg, #263e70 0%, #03091b 100%), linear-gradient(255.46deg, #B73E14 0%, #D65C32 100%);
-	padding-top: 3%;
-	padding-bottom: 2%;
-	color: white;
-	text-align: center;
+.headings{
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
 }
+
 #applications{
 	margin-top: 0%;
 	padding-top: 5%;
@@ -90,16 +152,45 @@ body{
 }
 
 #caption:hover .card-img-top {
-  	opacity: 0.7;
-}
-#caption:hover .img_caption {
-  	opacity: 0.75;
+  	transform: scale(1.2,1.1);
+    transition-duration: 1s;
 }
 .img_caption{
 	font-size: 13px;
 	text-align: center;
 	padding-top: 4%;
 	padding-bottom: 4%;
-	background-color: rgb(10, 24, 85);
+	background-color: #1F1F36;
 	margin-top: 2%;
+  margin-bottom: 0%;
+}
+.card-img-top{
+  height: 180px;width:280px;padding: 10px 25px 15px 25px;
+}
+.figure {
+    display: table;
+    margin: 0;
+    outline-style: ridge;
+    outline-width: 3px;
+    border-bottom: 0px;
+    margin-bottom: 8%;
+
+  }
+  
+  .figure img {
+    max-width: 100%;
+  }
+  
+  .figcaption {
+    display: table-caption;
+    caption-side: bottom;
+   
+
+    text-align: center;
+  }
+
+#caption{
+    margin-left:0%;
+    margin-right: 0%;
+    
 }
